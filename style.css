@@ -5,14 +5,16 @@ html{
     padding: 0;
     font-family: Helvetica, Sans-Serif;
     overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 body{
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     background-color: #2C061F;
     color: #D89216;
 }
@@ -37,7 +39,7 @@ body{
     background-color: #374045;
     z-index: -1;
     top: 8%;
-    left: 58%;
+    left: 58%
 }
 
 .rectangle2{
@@ -46,7 +48,7 @@ body{
     width: 60vw;
     background-color: #E1D89F;
     z-index: -1;
-    top: 60%;
+    top: 68%;
     left: -36%;
 }
 
