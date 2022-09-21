@@ -18,7 +18,7 @@ console.log("Days difference: " + diffDays);
 
 updateCislo();
 
-numberElement.innerHTML = cislo;
+numberElement.innerHTML = cislo + " kč";
 
 function updateCislo(){
     cislo = cislo * (Math.pow(2, diffDays));
