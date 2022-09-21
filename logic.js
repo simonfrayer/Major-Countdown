@@ -1,24 +1,27 @@
 let numberElement = document.getElementById("number");
 let cislo = 1;
 
-const today = new Date();
-const dd = String(today.getDate()).padStart(2, '0');
-const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-const yyyy = today.getFullYear();
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let yyyy = today.getFullYear();
 
-today = mm + '/' + dd + '/' + yyyy;
+let todayString = mm +'/' + dd + '/' + yyyy;
 
 const startDate = new Date('9/13/2022');
 
 const diffTime = Math.abs(today - startDate);
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
 
+console.log("Today: " + todayString);
+console.log("Days difference: " + diffDays);
+
+updateCislo();
+
 numberElement.innerHTML = cislo;
 
 function updateCislo(){
-    cislo = Math.pow(cislo, getDayDifference);
-};
+    cislo = cislo * (Math.pow(2, diffDays));
 
-function getDayDifference(){
-    return diffDays;
-}
+    console.log("Cislo ma byt: " + cislo);
+};
